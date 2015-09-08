@@ -1,1 +1,33 @@
 // aurora-ui :: Defaults
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+th {
+  text-align: left;
+  vertical-align: bottom;
+}
+
+th,
+td {
+  line-height: inherit;
+  padding: $ae-cell-padding;
+}
+
+td { 
+  vertical-align: top;
+  
+  tfoot & {
+    font-style: italic;
+  }
+}
+
+caption {
+  color: $ae-light-grey;
+  font-size: 1rem;
+  text-align: left;
+}
