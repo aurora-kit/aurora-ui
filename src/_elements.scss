@@ -7,7 +7,7 @@
 
     td,
     th {
-      border-bottom-color: $ae-light-grey;
+      border-bottom-color: $ae-table-line-color;
       border-bottom-style: solid;
     }
 
@@ -16,16 +16,14 @@
       border-bottom-width: 2px;
     }
 
-    tr:last-child td { border-bottom-width: 0;}
     tfoot td { 
-      border-top: 1px solid $ae-light-grey;
-      color: $ae-mid-grey;
+      color: $ae-table-footer-color;
     }
   }
 
   .#{$ae}-table--strips {
     tbody tr:nth-of-type(odd) {
-      background-color: $ae-ultra-light-grey;
+      background-color: $ae-table-background-color;
     }
   }
 
@@ -37,20 +35,21 @@
     }
 
     tbody tr:hover {
-      background-color: $ae-ultra-light-grey;
+      background-color: $ae-table-background-color;
     }
 
     &.#{$ae}-table--strips tbody tr:hover {
-      background-color: $ae-light-grey;
+      background-color: darken($ae-table-background-color, 5);
     }
   }
 
   .#{$ae}-table--borders {
-    border: 1px solid $ae-light-grey;
+    border: 1px solid $ae-table-line-color;
+    border-bottom: 0;
 
     td,
     th {
-      border-right: 1px solid $ae-light-grey;
+      border-right: 1px solid $ae-table-line-color;
 
       &:last-child {
         border-right: 0;
@@ -63,7 +62,6 @@
 
     @include ae-breakpoints($max: sm) {
       &.#{$ae}-table--borders td { border-right: 0; }
-      tbody tr:last-child td { border-bottom-width: 1px; }
       
       td {
         display: block;
@@ -98,7 +96,7 @@
   }
 
   .#{$ae}-list--lines li,
-  .#{$ae}-list--striped li {
+  .#{$ae}-list--strips li {
     padding: .275rem .35rem;
   }
 
@@ -108,7 +106,7 @@
     }
   }
 
-  .#{$ae}-list--striped {
+  .#{$ae}-list--strips {
     li {
       border-bottom: 1px solid $ae-list-line-color;  
     }
