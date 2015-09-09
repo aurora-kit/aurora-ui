@@ -1,1 +1,85 @@
 // aurora-ui :: Elements
+
+@if $ae-table {
+
+  .#{$ae}-table {
+    margin-bottom: $ae-space;
+
+    td,
+    th {
+      border-bottom-color: $ae-light-grey;
+      border-bottom-style: solid;
+    }
+
+    td { border-bottom-width: 1px; }
+    th { 
+      border-bottom-width: 2px;
+    }
+
+    tr:last-child td { border-bottom-width: 0;}
+    tfoot td { 
+      border-top: 1px solid $ae-light-grey;
+      color: $ae-mid-grey;
+    }
+  }
+
+  .#{$ae}-table--strips {
+    tbody tr:nth-of-type(odd) {
+      background-color: $ae-ultra-light-grey;
+    }
+  }
+
+  .#{$ae}-table--hover {
+    @if $ae-transitions {
+      tbody tr {
+        transition: background-color 250ms;
+      }
+    }
+
+    tbody tr:hover {
+      background-color: $ae-ultra-light-grey;
+    }
+
+    &.#{$ae}-table--strips tbody tr:hover {
+      background-color: $ae-light-grey;
+    }
+  }
+
+  .#{$ae}-table--borders {
+    border: 1px solid $ae-light-grey;
+
+    td,
+    th {
+      border-right: 1px solid $ae-light-grey;
+
+      &:last-child {
+        border-right: 0;
+      }
+    }
+
+  }
+
+  .#{$ae}-table--responsive {
+
+    @include ae-breakpoints($max: sm) {
+      &.#{$ae}-table--borders td { border-right: 0; }
+      tbody tr:last-child td { border-bottom-width: 1px; }
+      
+      td {
+        display: block;
+
+        &:before {
+          content: attr(data-th) ' ';
+          display: block;
+        }
+      }
+
+      th {
+        display: none;
+      }
+    }
+
+  }
+
+} // $ae-table
+
