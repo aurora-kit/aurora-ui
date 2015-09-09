@@ -1,10 +1,20 @@
 // aurora-ui :: Settings
 @import '../../aurora-shared/src/settings';
 
-$ae-cell-padding: .25rem 1rem !default;
-
+$ae-transitions: true !default;
 
 /// Generate elements
 $ae-table: true !default;
+$ae-list: true !default;
 
-$ae-transitions: true !default;
+/// Table
+$ae-cell-padding: .25rem 1rem !default;
+
+/// List
+$ae-list-line-color: $ae-light-grey;
+$ae-list-background: $ae-ultra-light-grey;
+
+
+
+
+
