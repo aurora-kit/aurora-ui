@@ -1,7 +1,16 @@
 // aurora-ui :: Defaults
 
+/// Images
+img {
+  border: 0;
+  height: auto;
+  max-width: 100%;
+}
+
+
+/// Tables
 table {
-  border-collapse: separate;
+  border-collapse: collapse;
   border-spacing: 0;
   max-width: 100%;
   width: 100%;
@@ -31,3 +40,50 @@ caption {
   font-size: 1rem;
   text-align: left;
 }
+
+
+/// Forms
+
+input,
+select,
+optgroup,
+textarea,
+fieldset {
+  color: inherit;
+  font: inherit;
+  font-size: $ae-form-font-size;
+  margin: 0;
+
+  &:disabled {
+    opacity: .65;
+    pointer-events: none;
+  }
+}
+
+input[type='text'],
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='email'],
+input[type='month'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='time'],
+input[type='url'],
+input[type='week'] {
+  border: $ae-input-border-width solid $ae-input-border-color;
+  line-height: $ae-input-line-height;
+  padding: $ae-input-padding-y $ae-input-padding-x;
+  vertical-align: middle;
+}
+
+select {
+  border-radius: 0;
+  height: $ae-select-height;
+  text-transform: none;
+  vertical-align: middle; 
+}
+
+
