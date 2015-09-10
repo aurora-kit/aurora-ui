@@ -79,11 +79,40 @@ input[type='week'] {
   vertical-align: middle;
 }
 
+label {
+  padding-bottom: $ae-input-padding-y;
+  padding-top: $ae-input-padding-y;
+}
+
 select {
   border-radius: 0;
   height: $ae-select-height;
   text-transform: none;
-  vertical-align: middle; 
+  vertical-align: middle;
+  
+  &[multiple],
+  &[size] {
+    border: $ae-input-border-width solid $ae-input-border-color;
+    height: auto;
+    padding: $ae-input-padding-y $ae-input-padding-x;
+  }
+
 }
 
+fieldset {
+  border: $ae-input-border-width solid $ae-input-border-color;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
 
+legend {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  border: $ae-input-border-width solid $ae-input-border-color;
+  overflow: auto;
+  padding: $ae-input-padding-y $ae-input-padding-x;
+  vertical-align: top;
+}
