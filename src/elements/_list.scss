@@ -1,0 +1,41 @@
+/// $ae-list
+
+@if $ae-list {
+
+  .#{$ae}-list {
+    list-style: none;
+    padding-left: 0;
+
+    ul, 
+    ol {
+      list-style: none;
+      padding-left: 1rem;
+    }
+  }
+
+  .#{$ae}-list--lines li,
+  .#{$ae}-list--strips li {
+    padding: .275rem .35rem;
+  }
+
+  .#{$ae}-list--lines {
+    li:nth-child(n+2) {
+      border-top: 1px solid $ae-list-line-color;  
+    }
+  }
+
+  .#{$ae}-list--strips {
+    li {
+      border-bottom: 1px solid $ae-list-line-color;  
+    }
+
+    li:first-child {
+      border-top: 1px solid $ae-list-line-color;  
+    }
+
+    li:nth-of-type(odd) {
+      background-color: $ae-list-background;
+    }
+  }
+
+}
