@@ -60,7 +60,7 @@
 
   .#{$ae}-table--responsive {
 
-    @include ae-breakpoints($max: sm) {
+    @include ae-breakpoints($max: $ae-table-responsive-bp) {
       &.#{$ae}-table--borders td { border-right: 0; }
       
       td {
@@ -69,6 +69,7 @@
         &:before {
           content: attr(data-th) ' ';
           display: block;
+          @if $ae-table-responsive-th-bold { font-weight: 500; }
         }
       }
 
